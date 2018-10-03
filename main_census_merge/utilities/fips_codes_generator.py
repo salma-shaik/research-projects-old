@@ -24,8 +24,8 @@ def get_df(file_path, year=None):
 """
 # initial_df = get_df(('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann_county.csv')) # 2010 county census file
 # initial_df = get_df('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2000/DEC_00_SF1_P012_with_ann.csv', 2000) # 2000 county census file
-# initial_df = get_df(('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann_city.csv'))   # 2010 city census file
-initial_df = get_df('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2000/DEC_00_SF1_P012_with_ann.csv', 2000) # # 2000 city census file
+initial_df = get_df(('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann_city_FIPS_STATE_PLACE.csv'))   # 2010 city census file
+#initial_df = get_df('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/DEC_00_SF1_P012_with_ann.csv', 2000)  # 2000 city census file
 
 """
  Return Id2 column as a series to apply the split_id2 function to each element of the column
@@ -93,12 +93,21 @@ def create_fips_cols(split_index, census_type=None):
     return initial_df.reindex(columns=df_cols)
 
 
+# Create a corresponding YEAR column
+def create_year_col(df, year):
+        df = df.assign(YEAR=year)
+        return df
 """
-3) Create final df with FIPS_PLACE/FIPS_COUNTY and FIPS_STATE columns
+3) Create df with FIPS_PLACE/FIPS_COUNTY, FIPS_STATE, YEAR columns
 """
 # final_df = create_fips_cols(-3, 'county') # -3 split index for county Id2
-final_df = create_fips_cols(-5) # -5 split index for city Id2
+df = create_fips_cols(-5) # -5 split index for city Id2
 
+"""
+4) Create YEAR column
+"""
+final_df = create_year_col(df, 2000)
+print(final_df['YEAR'].head())
 
 """
 To write final df to a csv
@@ -113,13 +122,14 @@ def create_updated_csv(df, file_path, enc, ind_val):
 
 # new_file_path = 'C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann_county_FIPS_STATE_COUNTY.csv' # new 2010 county census file
 # new_file_path = 'C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2000/DEC_00_SF1_P012_with_ann_county_FIPS_STATE_COUNTY.csv' # new 2000 county census file
-# new_file_path = 'C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann_city_FIPS_STATE_PLACE.csv' # new 2010 city census file
-new_file_path = 'C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2000/DEC_00_SF1_P012_with_ann_city_FIPS_STATE_PLACE.csv' # new 2000 city census file
+new_file_path = 'DEC_10_SF1_P12_with_ann_city_FIPS_STATE_PLACE.csv' # new 2010 city census file
+#new_file_path = 'DEC_00_SF1_P012_with_ann_city_FIPS_STATE_PLACE.csv' # new 2000 city census file
 
 enc_type = 'utf-8'
 index_value = False
 
 """
-4) Write the final modified dataframe with fips place and state columns to a new csv
+5) Write the final modified dataframe with fips place and state columns to a new csv
 """
+
 create_updated_csv(final_df, new_file_path, enc_type, index_value)
