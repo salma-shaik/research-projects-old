@@ -1,5 +1,6 @@
 import pandas as pd
 
+"""
 '''
 To disable the warning - SettingWithCopyWarning: A value is trying to be set on a copy of a slice from a DataFrame
 The point of the SettingWithCopyWarning is to show users (and esp new users) that they may be operating on a copy and not the original as they think. 
@@ -19,3 +20,11 @@ for row in county_census_2010_df_subset.itertuples():
     print(getattr(row,'Total'))
 
 # get the last occurence of matching STCO_FIPS for a given Id2 so that new record with year 2010 and Total: can be inserted below that
+
+"""
+main_file_snippet_df= pd.DataFrame(pd.read_csv('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/tests/test_data_files/main_file_snippet.csv'))
+county_census_2010_snippet_df = pd.DataFrame(pd.read_csv('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/tests/test_data_files/2010_county_census_snippet.csv'))
+
+county_census_2010_snippet_req_df = county_census_2010_snippet_df[['FIPS_STATE', 'FIPS_COUNTY', 'YEAR', 'County_Census_Pop']]
+merged_main_df = main_file_snippet_df.merge(county_census_2010_snippet_req_df, on=['FIPS_STATE', 'FIPS_COUNTY'])
+print(merged_main_df)
