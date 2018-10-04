@@ -298,8 +298,9 @@ Female: - 85 years and over     int64
 dtype: object
 """
 
-df = find_dtypes('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann.csv')
-print(df['Id2'].dtype)
+# df = find_dtypes('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann.csv')
+# print(df['Id2'].dtype)
+
 """
 df = find_dtypes('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_cities_2010/DEC_10_SF1_P12_with_ann.csv')
 # to get the type of each cell in the Total column
@@ -312,4 +313,41 @@ city_df = pd.read_csv('C:/Users/sshaik2/PycharmProjects/projects/research-projec
 print(set(city_df['Total_type'])) # {'str', 'int'}
 
 print(df['Total_type']) # some string values fpr ex: Id2=103076, 26 row index Total: is 53380(r38811)
+"""
+
+
+
+# National_Census_1990_All dtypes
+df = pd.DataFrame(pd.read_excel('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/National_Census_1990_All.xlsx'))
+print(df.head())
+"""
+Govt_level              int64
+place_fips              int64
+placename              object
+CNTY                  float64
+STATEFP                 int64
+POP100                  int64
+White_count             int64
+Black_count             int64
+Other_count             int64
+Hispan_allcount         int64
+Age1524_WhiteM          int64
+White_Males_All         int64
+Age1524_WhiteF          int64
+White_Females_All       int64
+Age1524_BlackM          int64
+Black_Males_All         int64
+Age1524_BlackF          int64
+Black_Females_All       int64
+Hispan_Males_All        int64
+Age1524_HispanM         int64
+Age1524_HispanF         int64
+Hispan_Females_All      int64
+Other_Males_All         int64
+Age1524_OtherM          int64
+Age1524_OtherF          int64
+Other_Females_All       int64
+Pct_WYM               float64
+Pct_WYF               float64
+dtype: object
 """
