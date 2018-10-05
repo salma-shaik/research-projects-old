@@ -86,32 +86,25 @@ Uses remove_unused_rows, update_all_census_files functions to modify census file
 """
 
 
-def update_all_census_files(data_files_path):
-    # count = 0
+def update_all_census_files(data_files_path,ori_files_folder_name, mod_files_folder_name):
     # Switch to the directory which has all the data folders/files
     os.chdir(data_files_path)
-    for dir in os.listdir():
-        # if count == 1:
-        #     break
-        # else:
-        census_folder_path = data_files_path+'/'+dir
+    for census_dir in os.listdir():
+        census_folder_path = data_files_path+'/'+census_dir
         os.chdir(census_folder_path)
         for sub_dir in os.listdir():
-            if sub_dir == 'original_files':
+            if sub_dir == ori_files_folder_name:
                 sub_dir_path = census_folder_path+'/'+sub_dir
                 os.chdir(sub_dir_path)
                 for f in os.listdir():
                     file_loc = sub_dir_path + '/' + f
                     modified_df = remove_unused_rows(file_loc)
                     updated_df = update_census_file_headers(modified_df, file_loc)
-                    out_path = census_folder_path + '/' + 'modified_files' + '/' + f
+                    out_path = census_folder_path + '/' + mod_files_folder_name + '/' + f
                     write_updated_df_csv(updated_df, out_path)
-                    # count += 1
 
 
-update_all_census_files('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data')
+update_all_census_files('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data', ori_files_folder_name='original_files', mod_files_folder_name='modified_files')
 #file_loc = 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/modified_files/DEC_10_SF1_P12_with_ann_county.csv'
 
-# modified_df = remove_unused_rows(file_loc)
-# update_census_file_headers(modified_df, file_loc)
 
