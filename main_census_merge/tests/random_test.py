@@ -1,0 +1,48 @@
+import pandas as pd
+#
+# census_type=''
+# year=''
+# def get_census_type(file_path): # pass the indexes of census type and year wor dlocations in the file name if reqd. Need to agree upon either having uniform file names or passing on the indexes
+#     cen_type=''
+#     # Get a list of all the navigation folders in the file path
+#     fp_words = file_path.split('/')
+#
+#     # Get a list of words in the folder name
+#     fdn_words = fp_words[-3].split('_')
+#
+#     if 'county' in fdn_words:
+#         cen_type = 'county'
+#     elif 'city' in fdn_words:
+#         cen_type = 'city'
+#
+#     # Extract the year from the file name list of words
+#     cen_year = fp_words[-1].split('_')[-5] # get year which is in the 5th position from the end
+#
+#     return(cen_type, cen_year)
+#
+#
+# file_loc = 'C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2010/modified_files/DEC_10_SF1_P12_with_ann.csv'
+#
+# (census_type, year) = get_census_type(file_loc)
+#
+# print(census_type)
+# print(year)
+
+
+df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
+
+def arrange_cols(df, df_cols, cols_dict):
+    for ind, col in cols_dict.items():
+        # print(ind, col)
+        print(df_cols.pop(df_cols.index(col)))
+    #     df.insert(ind, df_cols.pop(df_cols.index(col)))
+    # return df.reindex(columns=df_cols)
+
+df1_cols = df1.columns.tolist()  # to get a list of columns
+
+arrange_cols(df=df1, df_cols=df1_cols, cols_dict={1:'C', 2:'A'})
+
+# print(df1_cols)
+# ini_df = arrange_cols(df=df1, df_cols=df1_cols, cols_dict={1:'C', 2:'A'})
+#
+# print(ini_df)

@@ -104,7 +104,8 @@ def update_all_census_files(data_files_path,ori_files_folder_name, mod_files_fol
                     write_updated_df_csv(updated_df, out_path)
 
 
-update_all_census_files('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data', ori_files_folder_name='original_files', mod_files_folder_name='modified_files')
-#file_loc = 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/modified_files/DEC_10_SF1_P12_with_ann_county.csv'
+update_all_census_files('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data',
+                        ori_files_folder_name='original_files', mod_files_folder_name='modified_files')
+
 
 
