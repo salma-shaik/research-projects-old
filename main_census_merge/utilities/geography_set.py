@@ -2,7 +2,7 @@ import csv
 
 geo_dict = {}
 
-with open('data/census_county_2010/DEC_10_SF1_P12_with_ann_county.csv', 'r', encoding='utf-8', errors='ignore') as fr:
+with open('data/census_county_2010/DEC_10_SF1_P12_with_ann.csv', 'r', encoding='utf-8', errors='ignore') as fr:
     '''
     To skip the 1st row which has VD01, VD02 etc.. as codes so that the next row which has more
     # clear column headers can be considered as the header row by dict reader

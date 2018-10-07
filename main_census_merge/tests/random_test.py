@@ -27,22 +27,34 @@ import pandas as pd
 #
 # print(census_type)
 # print(year)
-
-
-df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
-
-def arrange_cols(df, df_cols, cols_dict):
-    for ind, col in cols_dict.items():
-        # print(ind, col)
-        print(df_cols.pop(df_cols.index(col)))
-    #     df.insert(ind, df_cols.pop(df_cols.index(col)))
-    # return df.reindex(columns=df_cols)
-
-df1_cols = df1.columns.tolist()  # to get a list of columns
-
-arrange_cols(df=df1, df_cols=df1_cols, cols_dict={1:'C', 2:'A'})
-
-# print(df1_cols)
-# ini_df = arrange_cols(df=df1, df_cols=df1_cols, cols_dict={1:'C', 2:'A'})
 #
-# print(ini_df)
+#
+# df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
+#
+# def arrange_cols(df, df_cols, cols_dict=None):
+#     for ind, col in cols_dict.items():
+#         df_cols.insert(ind, df_cols.pop(df_cols.index(col)))
+#         # df_cols.insert(0, df_cols.pop(df_cols.index('C')))
+#     return df.reindex(columns=df_cols)
+#
+# df1_cols = df1.columns.tolist()  # to get a list of columns
+#
+# df1 = arrange_cols(df=df1, df_cols=df1_cols, cols_dict={0:'C'})
+#
+# df1['test'] = 0
+#
+# print(df1)
+
+def test_tup_list():
+    fp_list = []
+    fp_list.append((1, 2))
+    fp_list.append((4, 5))
+    fp_list.append((7, 9))
+    return fp_list
+
+
+fp_tup_list= test_tup_list()
+
+for fp in fp_tup_list:
+    inp, op = fp
+    print(inp, op)

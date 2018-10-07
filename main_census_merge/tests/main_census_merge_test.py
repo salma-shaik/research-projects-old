@@ -11,7 +11,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 main_file_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/Final_Main_Var_1990_2001.csv')
 main_file_df_subset = main_file_df.iloc[:24]
 
-county_census_2010_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann_county.csv')
+county_census_2010_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann.csv')
 county_census_2010_df_subset = county_census_2010_df.iloc[[69, 74, 81]]
 county_census_2010_df_subset.rename({'Total:':'Total'}, axis=1, inplace=True)
 

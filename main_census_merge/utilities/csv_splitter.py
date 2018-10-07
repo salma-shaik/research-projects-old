@@ -15,7 +15,7 @@ def split_csv(filepath, census_type=None):
     if census_type == 'county':
         # index=False --> to avoid python/pandas from creating a default index in the csv
         county_df = initial_csv_df.head(3143)
-        county_df.to_csv('data/census_county_2010/DEC_10_SF1_P12_with_ann_county.csv', encoding='utf-8', index=False)
+        county_df.to_csv('data/census_county_2010/DEC_10_SF1_P12_with_ann.csv', encoding='utf-8', index=False)
 
         county_urban_df = initial_csv_df.iloc[3143:6286]
         county_urban_df.to_csv('data/census_county_2010/DEC_10_SF1_P12_with_ann_county_urban.csv', encoding='utf-8', index=False)

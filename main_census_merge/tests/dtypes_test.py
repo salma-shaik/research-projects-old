@@ -124,7 +124,7 @@ dtype: object
 """
 
 # 2010 county file
-# find_dtypes('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann_county.csv', '2010-county')
+# find_dtypes('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data/census_county_2010/DEC_10_SF1_P12_with_ann.csv', '2010-county')
 """
 Id                             object
 Id2                             int64

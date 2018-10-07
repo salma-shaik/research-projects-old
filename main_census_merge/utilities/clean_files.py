@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import shutil
 
 """
 Helper function to remove unwanted columns from a csv.
@@ -37,9 +38,7 @@ Rename
 
 
 def remove_unused_rows(file_path):
-    # print(file_path)
     initial_df = pd.DataFrame(pd.read_csv(file_path, encoding='utf-8'))
-    # print('Initial dtypes: #################', initial_df.dtypes)
     # Dropping the 1st row which has Id, Id2, Geography etc.. values below the 1st column headers. drop() returns a new df
     reduced_df = initial_df.drop(initial_df.index[0])
     return reduced_df
@@ -86,26 +85,46 @@ Uses remove_unused_rows, update_all_census_files functions to modify census file
 """
 
 
-def update_all_census_files(data_files_path,ori_files_folder_name, mod_files_folder_name):
+def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_folder_name):
     # Switch to the directory which has all the data folders/files
+    fp_list=[]
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        census_folder_path = data_files_path+'/'+census_dir
-        os.chdir(census_folder_path)
-        for sub_dir in os.listdir():
-            if sub_dir == ori_files_folder_name:
-                sub_dir_path = census_folder_path+'/'+sub_dir
-                os.chdir(sub_dir_path)
-                for f in os.listdir():
-                    file_loc = sub_dir_path + '/' + f
-                    modified_df = remove_unused_rows(file_loc)
-                    updated_df = update_census_file_headers(modified_df, file_loc)
-                    out_path = census_folder_path + '/' + mod_files_folder_name + '/' + f
-                    write_updated_df_csv(updated_df, out_path)
+        if not census_dir.startswith('.'): # to ignore hidden files such as .DS_Store
+            census_folder_path = data_files_path+'/'+census_dir
+
+            # move into the county/city census dir
+            os.chdir(census_folder_path)
+
+            # overwrite the mod files folder if it already exists
+            out_dir_path = census_folder_path + '/' + mod_files_folder_name
+            if os.path.exists(out_dir_path):
+                shutil.rmtree(out_dir_path)
+            os.mkdir(out_dir_path)
+            # os.makedirs(out_dir_path) - if subdirectories. Implement if needed like may be pass a list and mkdirs if list len > 1
+
+            # get a list of input files and capture their paths
+            for sub_dir in os.listdir():
+                if sub_dir == ori_files_folder_name:
+                    sub_dir_path = census_folder_path+'/'+sub_dir
+                    os.chdir(sub_dir_path)
+                    for f in os.listdir():
+                        # create input file path
+                        in_file = sub_dir_path + '/' + f
+                        # create output file path
+                        out_file = out_dir_path + '/' + f
+                        fp_list.append((in_file, out_file))
+    return fp_list
 
 
-update_all_census_files('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data',
+# get the list of input and output file path tuples
+file_paths_list = find_census_files_path('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data',
                         ori_files_folder_name='original_files', mod_files_folder_name='modified_files')
 
 
-
+# for every tuple of inp and out file paths, perform the reqd operations
+for f_paths in file_paths_list:
+    ip_file, op_file = f_paths
+    df1 = remove_unused_rows(ip_file)
+    updated_df = update_census_file_headers(df1, ip_file)
+    write_updated_df_csv(updated_df, op_file)

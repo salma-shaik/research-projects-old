@@ -1,7 +1,7 @@
 import pandas as pd
 
 """
-# Finding Id2 from DEC_10_SF1_P12_with_ann_county.csv that don't have a matching STCO_FIPS in Final_Main_Var_1990_2001.csv file
+# Finding Id2 from DEC_10_SF1_P12_with_ann.csv that don't have a matching STCO_FIPS in Final_Main_Var_1990_2001.csv file
 main_file_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/Final_Main_Var_1990_2001.csv')
 main_file_stco_fips_set = set(main_file_df['STCO_FIPS'])
 print(main_file_stco_fips_set.__len__())
