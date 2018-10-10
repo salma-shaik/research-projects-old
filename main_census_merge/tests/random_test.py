@@ -45,16 +45,21 @@ import pandas as pd
 #
 # print(df1)
 
-def test_tup_list():
-    fp_list = []
-    fp_list.append((1, 2))
-    fp_list.append((4, 5))
-    fp_list.append((7, 9))
-    return fp_list
+# def test_tup_list():
+#     fp_list = []
+#     fp_list.append((1, 2))
+#     fp_list.append((4, 5))
+#     fp_list.append((7, 9))
+#     return fp_list
+#
+#
+# fp_tup_list= test_tup_list()
+#
+# for fp in fp_tup_list:
+#     inp, op = fp
+#     print(inp, op)
 
+df1 = pd.DataFrame({'Total:':[23423, 14,12456, 6434, 242]})
 
-fp_tup_list= test_tup_list()
-
-for fp in fp_tup_list:
-    inp, op = fp
-    print(inp, op)
+df1['POP100'] = df1['Total:']
+print(df1)
