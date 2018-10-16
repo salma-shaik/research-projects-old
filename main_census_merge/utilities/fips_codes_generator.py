@@ -1,5 +1,5 @@
 import pandas as pd
-from utilities import clean_files as cf
+from main_census_merge.utilities import clean_files as cf
 
 pd.options.mode.chained_assignment = None  # default='warn'
 """
@@ -184,10 +184,10 @@ def create_fips_cols(ini_df, geo_id2_ser):
 To write final df to a csv
 """
 
-
-def create_updated_csv(fnl_df, file_path, enc='utf-8', ind_val=False):
-    fnl_df.to_csv(file_path, encoding=enc, index=ind_val)
-    fnl_df = pd.read_csv(file_path)
+#
+# def create_updated_csv(fnl_df, file_path, enc='utf-8', ind_val=False, file_type=N):
+#     fnl_df.to_csv(file_path, encoding=enc, index=ind_val)
+#     fnl_df = pd.read_csv(file_path)
 
 
 def get_updated_census_cols(file_path):
@@ -212,12 +212,11 @@ def get_updated_census_cols(file_path):
 ############### TO-DO: Automate reading of files from the required directory so that all iles are modified as required with single run of the program ######################
 
 # First obtain the paths to read input file and to write output file
-fp_list = cf.find_census_files_path('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data', 'modified_files', 'modified_files_fips')
+fp_list = cf.find_census_files_path('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data', 'updated_col_headers', 'new fips_cols')
 
 
 for fp_elem in fp_list:
     inp_file_path, out_file_path = fp_elem
-
     # Second, obtain census_type and census_year values
     (census_type, census_year) = get_census_type_year(inp_file_path)
 
@@ -230,4 +229,4 @@ for fp_elem in fp_list:
     modified_df = get_updated_census_cols(inp_file_path)
 
     # Write the final modified df to an output csv
-    create_updated_csv(modified_df, out_file_path)
+    cf.write_updated_df_file(updated_df=modified_df, out_path=out_file_path)

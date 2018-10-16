@@ -53,7 +53,7 @@ The below function does the following:
 
 def update_census_file_headers(df_obj, file_path):
     # rename 'GEO.display-label' col
-    df_obj.rename({'GEO.display-label': 'placename'}, axis=1, inplace=True)
+    df_obj.rename(columns={'GEO.display-label': 'placename'}, inplace=True)
 
     # extract file name from the file path
     file_name = file_path.split('/')[-1]
@@ -75,7 +75,7 @@ Write the modified df to modified_files folder
 """
 
 
-def write_updated_df_csv(updated_df, out_path):
+def write_updated_df_file(updated_df, out_path):
     updated_df.to_csv(out_path, encoding='utf-8', index=False)
 
 
@@ -118,8 +118,8 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
 
 
 # get the list of input and output file path tuples
-file_paths_list = find_census_files_path('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data',
-                        ori_files_folder_name='original_files', mod_files_folder_name='modified_files')
+file_paths_list = find_census_files_path('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data',
+                        ori_files_folder_name='original_files', mod_files_folder_name='updated_col_headers')
 
 
 # for every tuple of inp and out file paths, perform the reqd operations
@@ -127,4 +127,4 @@ for f_paths in file_paths_list:
     ip_file, op_file = f_paths
     df1 = remove_unused_rows(ip_file)
     updated_df = update_census_file_headers(df1, ip_file)
-    write_updated_df_csv(updated_df, op_file)
+    write_updated_df_file(updated_df, op_file)

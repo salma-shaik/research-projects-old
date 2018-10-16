@@ -59,7 +59,15 @@ import pandas as pd
 #     inp, op = fp
 #     print(inp, op)
 
-df1 = pd.DataFrame({'Total:':[23423, 14,12456, 6434, 242]})
+# df1 = pd.DataFrame({'Total:':[23423, 14,12456, 6434, 242]})
+#
+# df1['POP100'] = df1['Total:']
+# print(df1)
 
-df1['POP100'] = df1['Total:']
+df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
+
+
+
+df1.rename(columns={'A': 'placename'}, inplace=True)
+# df1.rename(str.lower, axis='columns')
 print(df1)
