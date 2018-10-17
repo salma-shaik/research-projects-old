@@ -118,7 +118,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
 
 
 # get the list of input and output file path tuples
-file_paths_list = find_census_files_path('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data',
+file_paths_list = find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data',
                         ori_files_folder_name='original_files', mod_files_folder_name='updated_col_headers')
 
 

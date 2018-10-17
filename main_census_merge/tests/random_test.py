@@ -68,6 +68,12 @@ df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
 
 
 
-df1.rename(columns={'A': 'placename'}, inplace=True)
+# df1.rename(columns={'A': 'placename'}, inplace=True)
 # df1.rename(str.lower, axis='columns')
-print(df1)
+# print(df1)
+# print()
+# print(df1.dtypes)
+
+df2 = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new fips_cols/DEC_10_SF1_P12_with_ann.csv')
+print(df2.head())
+print(df2.dtypes)

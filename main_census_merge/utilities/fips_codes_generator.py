@@ -209,10 +209,10 @@ def get_updated_census_cols(file_path):
     return mod_df
 
 
-############### TO-DO: Automate reading of files from the required directory so that all iles are modified as required with single run of the program ######################
+############### TO-DO: Automate reading of files from the required directory so that all files are modified as required with single run of the program ######################
 
 # First obtain the paths to read input file and to write output file
-fp_list = cf.find_census_files_path('C:/Users/sshaik2/PycharmProjects/projects/research-projects/main_census_merge/data', 'updated_col_headers', 'new fips_cols')
+fp_list = cf.find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data', 'updated_col_headers', 'new fips_cols')
 
 
 for fp_elem in fp_list:
