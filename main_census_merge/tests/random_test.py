@@ -1,4 +1,5 @@
 import pandas as pd
+from main_census_merge.utilities import clean_files as cf
 #
 # census_type=''
 # year=''
@@ -63,17 +64,33 @@ import pandas as pd
 #
 # df1['POP100'] = df1['Total:']
 # print(df1)
+#
+# df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
+#
+#
+#
+# # df1.rename(columns={'A': 'placename'}, inplace=True)
+# # df1.rename(str.lower, axis='columns')
+# # print(df1)
+# # print()
+# # print(df1.dtypes)
+#
+# df2 = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new fips_cols/DEC_10_SF1_P12_with_ann.csv')
+# print(df2.head())
+# print(df2.dtypes)
+#
 
-df1 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 56,234]})
+# counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+# print(counties_2000_df.head())
+
+counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+counties_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+cities_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+cities_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
 
 
+national_census_2000_2010_all_df = counties_2000_df.append([counties_2010_df, cities_2000_df, cities_2010_df])
 
-# df1.rename(columns={'A': 'placename'}, inplace=True)
-# df1.rename(str.lower, axis='columns')
-# print(df1)
-# print()
-# print(df1.dtypes)
+print(national_census_2000_2010_all_df.tail(20))
 
-df2 = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new fips_cols/DEC_10_SF1_P12_with_ann.csv')
-print(df2.head())
-print(df2.dtypes)
+#cf.write_updated_df_file(national_census_2000_2010_all_df, 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/National_Census_00_10_All.csv')

@@ -114,6 +114,10 @@ def create_new_col(df, new_col_list):
 
 """
 Helper function to move columns to the required locations
+@Params:
+    df = df in context whose columns need to be rearranged
+    df_cols = list of columns of the df in context
+    cols_dict = mapping of columns and their desired indexes
 """
 
 
@@ -211,22 +215,23 @@ def get_updated_census_cols(file_path):
 
 ############### TO-DO: Automate reading of files from the required directory so that all files are modified as required with single run of the program ######################
 
-# First obtain the paths to read input file and to write output file
-fp_list = cf.find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data', 'updated_col_headers', 'new fips_cols')
+if __name__ == '__main__':
+    # First obtain the paths to read input file and to write output file
+    fp_list = cf.find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data', 'updated_col_headers', 'new_fips_cols')
 
 
-for fp_elem in fp_list:
-    inp_file_path, out_file_path = fp_elem
-    # Second, obtain census_type and census_year values
-    (census_type, census_year) = get_census_type_year(inp_file_path)
+    for fp_elem in fp_list:
+        inp_file_path, out_file_path = fp_elem
+        # Second, obtain census_type and census_year values
+        (census_type, census_year) = get_census_type_year(inp_file_path)
 
-    if census_year == '00':
-        census_year = 2000
-    elif census_year == '10':
-        census_year = 2010
+        if census_year == '00':
+            census_year = 2000
+        elif census_year == '10':
+            census_year = 2010
 
-    # Get a ne df with the required columns
-    modified_df = get_updated_census_cols(inp_file_path)
+        # Get a ne df with the required columns
+        modified_df = get_updated_census_cols(inp_file_path)
 
-    # Write the final modified df to an output csv
-    cf.write_updated_df_file(updated_df=modified_df, out_path=out_file_path)
+        # Write the final modified df to an output csv
+        cf.write_updated_df_file(updated_df=modified_df, out_path=out_file_path)

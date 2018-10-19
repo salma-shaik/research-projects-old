@@ -90,7 +90,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
     fp_list=[]
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.'): # to ignore hidden files such as .DS_Store
+        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv': # to ignore hidden files such as .DS_Store
             census_folder_path = data_files_path+'/'+census_dir
 
             # move into the county/city census dir
@@ -116,15 +116,15 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
                         fp_list.append((in_file, out_file))
     return fp_list
 
+if __name__ == '__main__':
+    # get the list of input and output file path tuples
+    file_paths_list = find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data',
+                            ori_files_folder_name='reduced_census_files', mod_files_folder_name='updated_col_headers')
 
-# get the list of input and output file path tuples
-file_paths_list = find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data',
-                        ori_files_folder_name='original_files', mod_files_folder_name='updated_col_headers')
 
-
-# for every tuple of inp and out file paths, perform the reqd operations
-for f_paths in file_paths_list:
-    ip_file, op_file = f_paths
-    df1 = remove_unused_rows(ip_file)
-    updated_df = update_census_file_headers(df1, ip_file)
-    write_updated_df_file(updated_df, op_file)
+    # for every tuple of inp and out file paths, perform the reqd operations
+    for f_paths in file_paths_list:
+        ip_file, op_file = f_paths
+        df1 = remove_unused_rows(ip_file)
+        updated_df = update_census_file_headers(df1, ip_file)
+        write_updated_df_file(updated_df, op_file)
