@@ -1,5 +1,6 @@
 import pandas as pd
 from main_census_merge.utilities import clean_files as cf
+import re
 #
 # census_type=''
 # year=''
@@ -83,14 +84,30 @@ from main_census_merge.utilities import clean_files as cf
 # counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
 # print(counties_2000_df.head())
 
-counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
-counties_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
-cities_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
-cities_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
-
-
-national_census_2000_2010_all_df = counties_2000_df.append([counties_2010_df, cities_2000_df, cities_2010_df])
-
-print(national_census_2000_2010_all_df.tail(20))
+# counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+# counties_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+# cities_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+# cities_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv', dtype={"place_fips":str, "CNTY":str, "STATEFP":str})
+#
+#
+# national_census_2000_2010_all_df = counties_2000_df.append([counties_2010_df, cities_2000_df, cities_2010_df])
+#
+# print(national_census_2000_2010_all_df.tail(20))
 
 #cf.write_updated_df_file(national_census_2000_2010_all_df, 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/National_Census_00_10_All.csv')
+
+# test_str = '53380(r38811)'
+
+
+def remove_revised_pop100(pop100_val, ptrn):
+    pattern = re.compile(ptrn)
+    match = pattern.search(pop100_val)
+    if match:
+        return pop100_val[:match.start()]
+    else:
+        return pop100_val
+
+
+test_df = pd.DataFrame({'A':[1,2,3], 'POP100':['53380(r38811)', '53380', '530(r311)']})
+test_df['POP100'] = test_df['POP100'].apply(remove_revised_pop100, args=('\(',))
+print(test_df['POP100'])

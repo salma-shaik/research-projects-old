@@ -40,16 +40,16 @@ def get_census_type_year(file_path): # pass the indexes of census type and year 
     return cen_type, cen_year
 
 
-"""
-Reads the original csv and returns it in a data-frame
-"""
-
-
-def get_df(file_path):
-    init_df = pd.DataFrame(pd.read_csv(file_path))
-    # Removing the 2nd row with Id, Id2 etc ..
-    reduced_df = init_df.drop(init_df.index[0])
-    return reduced_df
+# """
+# Reads the original csv and returns it in a data-frame
+# """
+#
+#
+# def get_df(file_path):
+#     init_df = pd.DataFrame(pd.read_csv(file_path))
+#     # Removing the 2nd row with Id, Id2 etc ..
+#     reduced_df = init_df.drop(init_df.index[0])
+#     return reduced_df
 
 
 """
@@ -198,7 +198,7 @@ def get_updated_census_cols(file_path):
     """
     1) Obtain the original csv in an initial df
     """
-    initial_df = get_df(file_path)
+    initial_df = pd.DataFrame(pd.read_csv(file_path))
 
     """
     2) convert GEO.id2 of int64 type to str type to split into fips state and fips place code respectively and get GEO.id2 column

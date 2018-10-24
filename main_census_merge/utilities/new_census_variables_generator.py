@@ -1,18 +1,26 @@
 import os
 import shutil
 import pandas as pd
-import numpy as np
+import re
 from main_census_merge.utilities import clean_files as cf
 from main_census_merge.utilities import fips_codes_generator as fcg
 
-"""
-Helper function to create POP100 column which is the Total: column renamed as P012VD01 for 2000, P12D001 for 2010
-"""
+
+def remove_revised_pop100(pop100_val, ptrn):
+    pattern = re.compile(ptrn)
+    match = pattern.search(pop100_val)
+    if match:
+        return pop100_val[:match.start()]
+    else:
+        return pop100_val
 
 
-def create_new_census_cols(initial_df, new_df, pop_var, new_cen_vars=True):
+def create_new_census_cols(initial_df, new_df, pop_var, census_year=None, new_cen_vars=True):
     if new_cen_vars is False:
+        # for 2010 city and 2010 county census files, total pop has revised number appended and it needs to be removed.
         new_df[f'{pop_var}'] = initial_df.iloc[:, 6]
+        if census_year == '10':
+            new_df[f'{pop_var}'] = new_df[f'{pop_var}'].apply(remove_revised_pop100, args=('\(',))
     else:
         new_df[f'{pop_var}_count'] = initial_df.iloc[:, 6]
         new_df[f'Age1524_{pop_var}M'] = initial_df.iloc[:, 11:16].sum(axis=1)
@@ -33,7 +41,7 @@ if __name__ == '__main__':
     mod_files_folder_name = 'new_census_variables'
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv':  # to ignore hidden files such as .DS_Store
+        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv':  # to ignore hidden files such as .DS_Store and all census file
 
             # create a new df for everytime we move into new census dir so that the data from previous iteration is not carried over as was happening with 2000 county census file
             new_df = pd.DataFrame()
@@ -57,7 +65,7 @@ if __name__ == '__main__':
 
                         # can create only POP100 column
                         if pop_type == 'P012' or pop_type == 'P12':
-                            create_new_census_cols(initial_df, new_df, 'POP100', new_cen_vars=False)
+                            create_new_census_cols(initial_df, new_df, 'POP100', census_year, new_cen_vars=False)
                         elif pop_type == 'P012A' or pop_type == 'P12A':
                             create_new_census_cols(initial_df, new_df,  'White')
                         elif pop_type == 'P012B' or pop_type == 'P12B':
@@ -89,13 +97,13 @@ if __name__ == '__main__':
 
 
 # stack all the individual new census variables dataframes together to create a final csv similar to National_Census_1990_All file
-# counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv')
-# counties_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv')
-# cities_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv')
-# cities_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv')
-#
-#
-# national_census_2000_2010_all_df = counties_2000_df.append([counties_2010_df, cities_2000_df, cities_2010_df])
-# cf.write_updated_df_file(national_census_2000_2010_all_df, 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/National_Census_00_10_All.csv')
+counties_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv')
+counties_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv')
+cities_2000_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv')
+cities_2010_df = pd.read_csv('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv')
+
+
+national_census_2000_2010_all_df = counties_2000_df.append([counties_2010_df, cities_2000_df, cities_2010_df])
+cf.write_updated_df_file(national_census_2000_2010_all_df, 'C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data/National_Census_00_10_All.csv')
 
 # print(national_census_2000_2010_all_df.head())
