@@ -1,5 +1,5 @@
 import pandas as pd
-from main_census_merge.utilities import clean_files as cf
+from utilities import clean_files as cf
 
 pd.options.mode.chained_assignment = None  # default='warn'
 """
@@ -217,7 +217,7 @@ def get_updated_census_cols(file_path):
 
 if __name__ == '__main__':
     # First obtain the paths to read input file and to write output file
-    fp_list = cf.find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data', 'updated_col_headers', 'new_fips_cols')
+    fp_list = cf.find_census_files_path('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data', 'updated_col_headers', 'new_fips_cols')
 
 
     for fp_elem in fp_list:

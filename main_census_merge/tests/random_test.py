@@ -1,5 +1,5 @@
 import pandas as pd
-from main_census_merge.utilities import clean_files as cf
+from utilities import clean_files as cf
 import re
 #
 # census_type=''
@@ -99,15 +99,33 @@ import re
 # test_str = '53380(r38811)'
 
 
-def remove_revised_pop100(pop100_val, ptrn):
-    pattern = re.compile(ptrn)
-    match = pattern.search(pop100_val)
-    if match:
-        return pop100_val[:match.start()]
-    else:
-        return pop100_val
+# def remove_revised_pop100(pop100_val, ptrn):
+#     pattern = re.compile(ptrn)
+#     match = pattern.search(pop100_val)
+#     if match:
+#         return pop100_val[:match.start()]
+#     else:
+#         return pop100_val
+#
+#
+# test_df = pd.DataFrame({'A':[1,2,3], 'POP100':['53380(r38811)', '53380', '530(r311)']})
+# test_df['POP100'] = test_df['POP100'].apply(remove_revised_pop100, args=('\(',))
+# print(test_df['POP100'])
 
 
-test_df = pd.DataFrame({'A':[1,2,3], 'POP100':['53380(r38811)', '53380', '530(r311)']})
-test_df['POP100'] = test_df['POP100'].apply(remove_revised_pop100, args=('\(',))
-print(test_df['POP100'])
+df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90.23,56,56,222,90], 'D':['a','b','c','d','e']})
+df2 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 59,234]})
+
+df_all_lt = df1.merge(df2.drop_duplicates(), on=['A', 'B'], how='left', indicator=True)
+print(df_all_lt)
+
+# Replace NaN value from c_y with c_x value
+# final['c'] = final['c_y'].fillna(final['c_x'])
+
+print()
+
+df_all_lt['C'] = df_all_lt['C_y'].fillna(df_all_lt['C_x'])
+df_all_lt = df_all_lt.drop(['C_x', 'C_y', '_merge'], axis=1)
+print(df_all_lt)
+# df_all_rt = df1.merge(df2.drop_duplicates(), on=['A','B','C'], how='right', indicator=True)
+# print(df_all_rt)

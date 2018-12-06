@@ -1,14 +1,12 @@
 import pandas as pd
 import os
 import shutil
+import re
 
 """
 Helper function to remove unwanted columns from a csv.
 Can either return the modified df or write it to a file
 """
-
-# global variable to hold the file path to be used across multiple functions
-# file_loc = ''
 
 
 def remove_unused_cols(file_path, file_out_path, out_type, drop_cols, enc_type='utf-8'):
@@ -45,15 +43,31 @@ def remove_unused_rows(file_path):
 
 
 """
-The below function does the following:
- - renames 'GEO.display-label'column to 'placename'
- - extracts the corresponding 'P**' string from the filename and prefixes it to each of the column headers
+- renames 'GEO.display-label'column to 'placename'
+- strip ',' and state name from placename value
+"""
+
+
+def remove_state_from_placename(pl_name, ptrn):
+    pattern = re.compile(ptrn)
+    match = pattern.search(pl_name)
+    if match:
+        return pl_name[:match.start()]
+    else:
+        return pl_name
+
+
+"""
+    extracts the corresponding 'P**' string from the filename and prefixes it to each of the column headers
 """
 
 
 def update_census_file_headers(df_obj, file_path):
     # rename 'GEO.display-label' col
     df_obj.rename(columns={'GEO.display-label': 'placename'}, inplace=True)
+    df_obj['placename'] = df_obj['placename'].apply(remove_state_from_placename, args=('\,',))
+
+    # use str
 
     # extract file name from the file path
     file_name = file_path.split('/')[-1]
@@ -90,7 +104,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
     fp_list=[]
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv': # to ignore hidden files such as .DS_Store
+        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv' and census_dir != 'National_Census_00_10_All.xlsx' : # to ignore hidden files such as .DS_Store
             census_folder_path = data_files_path+'/'+census_dir
 
             # move into the county/city census dir
@@ -118,7 +132,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
 
 if __name__ == '__main__':
     # get the list of input and output file path tuples
-    file_paths_list = find_census_files_path('C:/Users/sshaik2/Criminal_Justice/Projects/main_census_merge/data',
+    file_paths_list = find_census_files_path('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data',
                             ori_files_folder_name='reduced_census_files', mod_files_folder_name='updated_col_headers')
 
 
