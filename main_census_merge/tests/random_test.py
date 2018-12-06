@@ -113,19 +113,51 @@ import re
 # print(test_df['POP100'])
 
 
-df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90.23,56,56,222,90], 'D':['a','b','c','d','e']})
-df2 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 59,234]})
+# df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90.23,56,56,222,90], 'D':['a','b','c','d','e']})
+# df2 = pd.DataFrame({'A': [1,2,3], 'B':[6,5,7], 'C':[90.23, 59,234]})
+#
+# df_all_lt = df1.merge(df2.drop_duplicates(), on=['A', 'B'], how='left', indicator=True)
+# print(df_all_lt)
+#
+# # Replace NaN value from c_y with c_x value
+# # final['c'] = final['c_y'].fillna(final['c_x'])
+#
+# print()
+#
+# df_all_lt['C'] = df_all_lt['C_y'].fillna(df_all_lt['C_x'])
+# df_all_lt = df_all_lt.drop(['C_x', 'C_y', '_merge'], axis=1)
+# print(df_all_lt)
+# # df_all_rt = df1.merge(df2.drop_duplicates(), on=['A','B','C'], how='right', indicator=True)
+# # print(df_all_rt)
 
-df_all_lt = df1.merge(df2.drop_duplicates(), on=['A', 'B'], how='left', indicator=True)
-print(df_all_lt)
+df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90,56,22,43,55], 'D':['a','b','c','d','e']})
+df2 = pd.DataFrame({'A': [10,20,30,40], 'B':[6,15,5,8], 'C':[90,66,22,43]})
 
-# Replace NaN value from c_y with c_x value
-# final['c'] = final['c_y'].fillna(final['c_x'])
+merged_df = df1.merge(df2.drop_duplicates(), on=['B', 'C'], how='left', indicator=True)
+print(merged_df)
 
-print()
+"""
+   A_x  B   C   A_y
+0    1  6  90  10.0
+1    2  5  56   NaN
+2    2  5  22  30.0
+3    4  8  43  40.0
+4    1  6  55   NaN
 
-df_all_lt['C'] = df_all_lt['C_y'].fillna(df_all_lt['C_x'])
-df_all_lt = df_all_lt.drop(['C_x', 'C_y', '_merge'], axis=1)
-print(df_all_lt)
-# df_all_rt = df1.merge(df2.drop_duplicates(), on=['A','B','C'], how='right', indicator=True)
-# print(df_all_rt)
+for the column that needs to be merged, 2 columns _x and _y are created. _y will have NaNs in non matching
+rows' cells. Replace these NaNs with values from corresponding cells of _x and assign this to new column
+which will have the final column name
+Then drop _x and _y
+
+   A_x  B   C  D   A_y     _merge
+0    1  6  90  a  10.0       both
+1    2  5  56  b   NaN  left_only
+2    2  5  22  c  30.0       both
+3    4  8  43  d  40.0       both
+4    1  6  55  e   NaN  left_only
+"""
+# df3 = pd.concat([df1, df2])
+# print(df3)
+
+# df4 = df1[['A', 'B']].append(df2[['A']])
+# print(df4)
