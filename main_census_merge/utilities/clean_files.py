@@ -104,7 +104,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
     fp_list=[]
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv' and census_dir != 'National_Census_00_10_All.xlsx' : # to ignore hidden files such as .DS_Store
+        if not census_dir.startswith('.') and census_dir != 'wip_merge_files': # to ignore hidden files such as .DS_Store
             census_folder_path = data_files_path+'/'+census_dir
 
             # move into the county/city census dir

@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+
 from utilities import clean_files as cf
 import re
 #
@@ -130,11 +132,11 @@ import re
 # # df_all_rt = df1.merge(df2.drop_duplicates(), on=['A','B','C'], how='right', indicator=True)
 # # print(df_all_rt)
 
-df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90,56,22,43,55], 'D':['a','b','c','d','e']})
-df2 = pd.DataFrame({'A': [10,20,30,40], 'B':[6,15,5,8], 'C':[90,66,22,43]})
-
-merged_df = df1.merge(df2.drop_duplicates(), on=['B', 'C'], how='left', indicator=True)
-print(merged_df)
+# df1 = pd.DataFrame({'A': [1,2,2,4,1], 'B':[6,5,5,8,6], 'C':[90,56,22,43,55], 'D':['a','b','c','d','e']})
+# df2 = pd.DataFrame({'A': [10,20,30,40], 'B':[6,15,5,8], 'C':[90,66,22,43]})
+#
+# merged_df = df1.merge(df2.drop_duplicates(), on=['B', 'C'], how='left', indicator=True)
+# print(merged_df)
 
 """
    A_x  B   C   A_y
@@ -161,3 +163,56 @@ Then drop _x and _y
 
 # df4 = df1[['A', 'B']].append(df2[['A']])
 # print(df4)
+
+"""
+Inner merge
+"""
+
+# df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94], 'D':['a','b','c','d','e']})
+# df2 = pd.DataFrame({'A': [20,30,40,60], 'B':[7,8,9,12], 'C':[91,92,93,99],'E':['B','C','D','F']})
+#
+# merged_df = df1.merge(df2, on=['B', 'C'], how='right')
+#
+# print(merged_df)
+
+"""
+Subset df based on certain values of a particular column
+"""
+
+# df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94]})
+# df1 = df1.loc[df1['A'].isin([2,3,4])]
+#
+# print(df1)
+
+
+"""
+pandas 3 way merge
+"""
+# df1 = pd.DataFrame(np.array([
+#     ['a', 5, 9],
+#     ['b', 4, 61],
+#     ['c', 24, 9]]),
+#     columns=['name', 'attr1', 'attr2'])
+# df2 = pd.DataFrame(np.array([
+#     ['a', 5, 19],
+#     ['b', 14, 16],
+#     ['c', 4, 9]]),
+#     columns=['name', 'attr1', 'attr2'])
+# df3 = pd.DataFrame(np.array([
+#     ['a', 15, 49],
+#     ['b', 4, 36],
+#     ['c', 14, 9]]),
+#     columns=['name', 'attr1', 'attr2'])
+#
+# df1 = df1.merge(df2,on='name').merge(df3,on='name')
+#
+# print(df1)
+
+
+"""
+merge test - different indices
+"""
+df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94]})
+df2 = pd.DataFrame({'A': [3,2,1,4,5], 'B':[80,7,60,9,10], 'C':[90,91,92,93,94]})
+
+print(df1.merge(df2, on=['A']))

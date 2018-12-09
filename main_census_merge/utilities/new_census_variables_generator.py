@@ -102,8 +102,7 @@ if __name__ == '__main__':
     mod_files_folder_name = 'new_census_variables'
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'National_Census_00_10_All.csv' and census_dir != 'National_Census_00_10_All.xlsx' \
-                and census_dir != 'crosswalk_improved_2006.xlsx':  # to ignore hidden files such as .DS_Store and all census file
+        if not census_dir.startswith('.') and census_dir != 'wip_merge_files': # to ignore hidden files such as .DS_Store and all census file
 
             # create a new df for everytime we move into new census dir so that the data from previous iteration is not carried over as was happening with 2000 county census file
             new_df = pd.DataFrame()
@@ -156,16 +155,3 @@ if __name__ == '__main__':
             out_file = out_dir_path + '/' + 'new_vars_'+ census_dir + '.csv'
             #final_var_df.fillna(0)
             cf.write_updated_df_file(final_var_df, out_file)
-
-
-# stack all the individual new census variables dataframes together to create a final csv similar to National_Census_1990_All file
-counties_2000_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv')
-counties_2010_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv')
-cities_2000_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv')
-cities_2010_df = pd.read_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv')
-
-
-national_census_2000_2010_all_df = counties_2010_df.append([cities_2010_df, counties_2000_df, cities_2000_df])
-cf.write_updated_df_file(national_census_2000_2010_all_df, '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/National_Census_00_10_All.csv')
-
-# print(national_census_2000_2010_all_df.head())
