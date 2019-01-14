@@ -153,7 +153,7 @@ def create_fips_cols(ini_df, geo_id2_ser):
         split_index = -5
 
         # get fips place code from geo id2
-        ini_df['place_fips'] = geo_id2_ser.apply(split_geo_id2, args=(split_index, 'place_fips'))
+        ini_df['place_fips'] = geo_id2_ser.apply(split_geo_id2, args=(split_index, 'place_fips')) ###### TO-DO: May be we don't need 'place-fips' here. CHECk #########
 
         # create a blank CNTY column and Govt_level with value 3 for city census
         ini_df = create_new_col(ini_df,  new_col_list={'CNTY':'', 'Govt_level': 3})

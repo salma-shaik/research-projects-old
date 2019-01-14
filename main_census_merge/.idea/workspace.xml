@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76127234-c25f-45b0-b172-8d49817bb048" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
+      <change beforePath="$PROJECT_DIR$/data/National_Census_00_10_All.csv" afterPath="$PROJECT_DIR$/data/National_Census_00_10_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/National_Census_00_10_All.xlsx" afterPath="$PROJECT_DIR$/data/National_Census_00_10_All.xlsx" />
+      <change beforePath="$PROJECT_DIR$/data/National_Census_2000_All.csv" afterPath="$PROJECT_DIR$/data/National_Census_2000_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/National_Census_2010_All.csv" afterPath="$PROJECT_DIR$/data/National_Census_2010_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/initial_files/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/new_fips_cols/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/reduced_census_files/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2000/updated_col_headers/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/initial_files/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/new_fips_cols/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/reduced_census_files/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_cities_2010/updated_col_headers/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/initial_files/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/new_fips_cols/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/reduced_census_files/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2000/updated_col_headers/DEC_00_SF1_P012_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/initial_files/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/new_fips_cols/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/reduced_census_files/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12A_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12A_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12B_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12B_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12H_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12H_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12I_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12I_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/data/census_county_2010/updated_col_headers/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/data/fips_govt_level.xlsx" afterPath="$PROJECT_DIR$/data/fips_govt_level.xlsx" />
+      <change beforePath="$PROJECT_DIR$/data/lnkng_crswlk_fips_cgov.csv" afterPath="$PROJECT_DIR$/data/lnkng_crswlk_fips_cgov.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/Final_Main_Var_1990_2001.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/Final_Main_Var_1990_2001.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_All_Initial.xlsx" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_All_Initial.xlsx" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_fm_merge.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_fm_merge.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_unique.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_1990_unique.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2000_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2000_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2000_fm_merge.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2000_fm_merge.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2010_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2010_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2010_fm_merge.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_2010_fm_merge.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/National_Census_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/National_Census_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/fips_govt_level.xlsx" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_final.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_final.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_unique.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_1990_unique.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2000_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2000_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2000_final.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2000_final.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2010_All.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2010_All.csv" />
+      <change beforePath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2010_final.csv" afterPath="$PROJECT_DIR$/data/wip_merge_files/temp/National_Census_2010_final.csv" />
+      <change beforePath="$PROJECT_DIR$/pandas_join_ex.py" afterPath="$PROJECT_DIR$/pandas_join_ex.py" />
+      <change beforePath="$PROJECT_DIR$/pandas_merge_ex.py" afterPath="$PROJECT_DIR$/pandas_merge_ex.py" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/Census_Variables_Mapping.xlsx" afterPath="$PROJECT_DIR$/reference_data_files/Census_Variables_Mapping.xlsx" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/Final_Main_1990_2001.xlsx" afterPath="$PROJECT_DIR$/reference_data_files/Final_Main_1990_2001.xlsx" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/Final_Main_Var_1990_2001.csv" afterPath="$PROJECT_DIR$/reference_data_files/Final_Main_Var_1990_2001.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/National_Census_1990_All.xlsx" afterPath="$PROJECT_DIR$/reference_data_files/National_Census_1990_All.xlsx" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (1)/PEP_2011_PEPAGESEX.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (1)/PEP_2011_PEPAGESEX_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (1)/PEP_2011_PEPAGESEX_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (1)/aff_download_readme_ann.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (2)/PEP_2011_PEPANNRES.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (2)/PEP_2011_PEPANNRES_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (2)/PEP_2011_PEPANNRES_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download (2)/aff_download_readme_ann.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2015_PEPASR5H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2015_PEPASR5H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2015_PEPASR5H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL5N.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL5N_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL5N_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL6N.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL6N_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPALL6N_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR5H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR5H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR5H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR6H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR6H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPASR6H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR5H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR5H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR5H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR6H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR6H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2016_PEPSR6H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR5H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR5H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR5H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR6H.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR6H_metadata.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/PEP_2017_PEPSR6H_with_ann.csv" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/aff_download/aff_download_readme_ann.txt" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann_city_rural.csv" afterPath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann_city_rural.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann_city_urban.csv" afterPath="$PROJECT_DIR$/reference_data_files/city/DEC_10_SF1_P12_with_ann_city_urban.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann.csv" afterPath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann_county_rural.csv" afterPath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann_county_rural.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann_county_urban.csv" afterPath="$PROJECT_DIR$/reference_data_files/county/DEC_10_SF1_P12_with_ann_county_urban.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/crosswalk_improved_2006.xlsx" afterPath="$PROJECT_DIR$/reference_data_files/crosswalk_improved_2006.xlsx" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/fips_codes.csv" afterPath="$PROJECT_DIR$/reference_data_files/fips_codes.csv" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/id2_stco_fips.xlsx" afterPath="$PROJECT_DIR$/reference_data_files/id2_stco_fips.xlsx" />
+      <change beforePath="$PROJECT_DIR$/reference_data_files/nat_cen_00_lc_merged.csv" afterPath="$PROJECT_DIR$/reference_data_files/nat_cen_00_lc_merged.csv" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change beforePath="$PROJECT_DIR$/tests/drop_test.py" afterPath="$PROJECT_DIR$/tests/drop_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/dtypes_test.py" afterPath="$PROJECT_DIR$/tests/dtypes_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/file_name_split_test.py" afterPath="$PROJECT_DIR$/tests/file_name_split_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/main_census_merge_test.py" afterPath="$PROJECT_DIR$/tests/main_census_merge_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/merge_multiple_keys.py" afterPath="$PROJECT_DIR$/tests/merge_multiple_keys.py" />
+      <change beforePath="$PROJECT_DIR$/tests/random_test.py" afterPath="$PROJECT_DIR$/tests/random_test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/test.py" afterPath="$PROJECT_DIR$/tests/test.py" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/2010_cities_census_snippet.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/2010_cities_census_snippet.csv" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/2010_cities_census_total_col_dtypes.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/2010_cities_census_total_col_dtypes.csv" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/2010_county_census_snippet.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/2010_county_census_snippet.csv" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/2010_county_fips_gen_test.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/2010_county_fips_gen_test.csv" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/main_file_snippet.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/main_file_snippet.csv" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/merge_ex1_new.xlsx" afterPath="$PROJECT_DIR$/tests/test_data_files/merge_ex1_new.xlsx" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/merge_ex1_old.xlsx" afterPath="$PROJECT_DIR$/tests/test_data_files/merge_ex1_old.xlsx" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_files/merged_main_file_snippet.csv" afterPath="$PROJECT_DIR$/tests/test_data_files/merged_main_file_snippet.csv" />
+      <change beforePath="$PROJECT_DIR$/utilities/__init__.py" afterPath="$PROJECT_DIR$/utilities/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/clean_files.py" afterPath="$PROJECT_DIR$/utilities/clean_files.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/csv_splitter.py" afterPath="$PROJECT_DIR$/utilities/csv_splitter.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/find_unique.py" afterPath="$PROJECT_DIR$/utilities/find_unique.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/fips_codes_generator.py" afterPath="$PROJECT_DIR$/utilities/fips_codes_generator.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/geography_set.py" afterPath="$PROJECT_DIR$/utilities/geography_set.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/national_census_file_generator.py" afterPath="$PROJECT_DIR$/utilities/national_census_file_generator.py" />
+      <change beforePath="$PROJECT_DIR$/utilities/new_census_variables_generator.py" afterPath="$PROJECT_DIR$/utilities/new_census_variables_generator.py" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="census_data_interpolator.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utilities/census_data_interpolator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="census_interpolated_files.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utilities/census_interpolated_files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="census_year_replicator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utilities/census_year_replicator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="agency_replicator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utilities/agency_replicator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random_test.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/random_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="327">
+              <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+              <folding>
+                <element signature="e#90#91#0" expanded="false" />
+                <element signature="e#5302#5905#1" expanded="false" />
+                <element signature="e#5906#5935#0" expanded="false" />
+                <element signature="e#6028#6135#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>$PROJECT_DIR$/data</find>
+      <find>apply</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/utilities/national_census_file_generator.py" />
+        <option value="$PROJECT_DIR$/utilities/fips_codes_generator.py" />
+        <option value="$PROJECT_DIR$/utilities/census_interpolated_files.py" />
+        <option value="$PROJECT_DIR$/utilities/clean_files.py" />
+        <option value="$PROJECT_DIR$/utilities/national_census_file_sorter.py" />
+        <option value="$PROJECT_DIR$/utilities/national_govt_level_census_file_generator.py" />
+        <option value="$PROJECT_DIR$/tests/random_test.py" />
+        <option value="$PROJECT_DIR$/utilities/agency_replicator.py" />
+        <option value="$PROJECT_DIR$/utilities/census_year_replicator.py" />
+        <option value="$PROJECT_DIR$/utilities/census_data_interpolator.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="100" />
+    <option name="width" value="1680" />
+    <option name="height" value="835" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="main_census_merge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="main_census_merge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="main_census_merge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="main_census_merge" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="main_census_merge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="main_census_merge" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="main_census_merge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="main_census_merge" type="462c0819:PsiDirectoryNode" />
+              <item name="utilities" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\sshaik2\projects\research\research-projects\main_census_merge\tests\test_data_files" />
+      <recent name="C:\Users\sshaik2\projects\research\research-projects\main_census_merge\utilities" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.census_data_interpolator">
+    <configuration name="agency_replicator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="main_census_merge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/agency_replicator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="census_data_interpolator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="main_census_merge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/census_data_interpolator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="census_year_replicator" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="main_census_merge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/census_year_replicator.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="national_census_file_sorter" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utilities" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="main_census_merge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utilities/national_census_file_sorter.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="random_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="PYDEVD_LOAD_VALUES_ASYNC" value="True" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="main_census_merge" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/random_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="Python.random_test" />
+      <item index="1" class="java.lang.String" itemvalue="Python.national_census_file_sorter" />
+      <item index="2" class="java.lang.String" itemvalue="Python.agency_replicator" />
+      <item index="3" class="java.lang.String" itemvalue="Python.census_year_replicator" />
+      <item index="4" class="java.lang.String" itemvalue="Python.census_data_interpolator" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.census_data_interpolator" />
+        <item index="1" class="java.lang.String" itemvalue="Python.census_year_replicator" />
+        <item index="2" class="java.lang.String" itemvalue="Python.agency_replicator" />
+        <item index="3" class="java.lang.String" itemvalue="Python.random_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.national_census_file_sorter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76127234-c25f-45b0-b172-8d49817bb048" name="Default Changelist" comment="" />
+      <created>1544563293806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544563293806</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="100" width="1680" height="835" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19409283" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19459459" sideWeight="0.19228451" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19459459" sideWeight="0.8077155" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utilities/census_data_interpolator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="48" column="162" lean-forward="false" selection-start-line="48" selection-start-column="162" selection-end-line="48" selection-end-column="162" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/rename_cols_stack_columns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/random_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="215" column="51" lean-forward="false" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
+          <folding>
+            <element signature="e#90#91#0" expanded="false" />
+            <element signature="e#5302#5905#1" expanded="false" />
+            <element signature="e#5906#5935#0" expanded="false" />
+            <element signature="e#6028#6135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/national_census_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <marker date="1544571020000" expanded="true" signature="1317:3053" ph="..." />
+            <marker date="1544571020000" expanded="true" signature="9332:9418" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_interpolated_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="161" lean-forward="false" selection-start-line="7" selection-start-column="161" selection-end-line="7" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_data_interpolator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_interpolated_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="161" lean-forward="false" selection-start-line="7" selection-start-column="161" selection-end-line="7" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/rename_cols_stack_columns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/random_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="215" column="51" lean-forward="false" selection-start-line="215" selection-start-column="51" selection-end-line="215" selection-end-column="51" />
+          <folding>
+            <element signature="e#90#91#0" expanded="false" />
+            <element signature="e#5302#5905#1" expanded="false" />
+            <element signature="e#5906#5935#0" expanded="false" />
+            <element signature="e#6028#6135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/national_census_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <marker date="1544571020000" expanded="true" signature="1317:3053" ph="..." />
+            <marker date="1544571020000" expanded="true" signature="9332:9418" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/csv_splitter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/fips_codes_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/new_census_variables_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2228">
+          <caret line="150" column="44" lean-forward="true" selection-start-line="150" selection-start-column="44" selection-end-line="150" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/national_census_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="47" lean-forward="false" selection-start-line="46" selection-start-column="47" selection-end-line="46" selection-end-column="47" />
+          <folding>
+            <marker date="1544571020000" expanded="true" signature="1317:3053" ph="..." />
+            <marker date="1544571020000" expanded="true" signature="9332:9418" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/rename_cols_stack_columns.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/clean_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="78" column="0" lean-forward="false" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/national_govt_level_census_file_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="183" column="25" lean-forward="false" selection-start-line="183" selection-start-column="25" selection-end-line="183" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/national_census_file_sorter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/random_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="333" column="0" lean-forward="false" selection-start-line="333" selection-start-column="0" selection-end-line="333" selection-end-column="0" />
+          <folding>
+            <element signature="e#90#91#0" expanded="false" />
+            <element signature="e#5302#5905#1" expanded="false" />
+            <element signature="e#5906#5935#0" expanded="false" />
+            <element signature="e#6028#6135#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_interpolated_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/agency_replicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_year_replicator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utilities/census_data_interpolator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

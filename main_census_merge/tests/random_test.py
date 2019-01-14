@@ -188,31 +188,150 @@ Subset df based on certain values of a particular column
 """
 pandas 3 way merge
 """
-# df1 = pd.DataFrame(np.array([
-#     ['a', 5, 9],
-#     ['b', 4, 61],
-#     ['c', 24, 9]]),
-#     columns=['name', 'attr1', 'attr2'])
-# df2 = pd.DataFrame(np.array([
-#     ['a', 5, 19],
-#     ['b', 14, 16],
-#     ['c', 4, 9]]),
-#     columns=['name', 'attr1', 'attr2'])
-# df3 = pd.DataFrame(np.array([
-#     ['a', 15, 49],
-#     ['b', 4, 36],
-#     ['c', 14, 9]]),
-#     columns=['name', 'attr1', 'attr2'])
-#
+df1 = pd.DataFrame(np.array([
+    ['a', 5, 9],
+    ['b', 4, 61],
+    ['c', 24, 9]]),
+    columns=['name', 'attr1', 'attr2'])
+df2 = pd.DataFrame(np.array([
+    ['a', 5, 19],
+    ['b', 14, 16],
+    ['c', 4, 9]]),
+    columns=['name', 'attr1', 'attr2'])
+df3 = pd.DataFrame(np.array([
+    ['a', 15, 49],
+    ['b', 4, 36],
+    ['c', 14, 9]]),
+    columns=['name', 'attr1', 'attr2'])
+
 # df1 = df1.merge(df2,on='name').merge(df3,on='name')
 #
 # print(df1)
+"""
+  name attr1_x attr2_x attr1_y attr2_y attr1 attr2
+0    a       5       9       5      19    15    49
+1    b       4      61      14      16     4    36
+2    c      24       9       4       9    14     9
+"""
+print()
+
+# df2 = df2.merge(df3,on='name').merge(df1,on='name')
+#
+# print(df2)
+"""
+  name attr1_x attr2_x attr1_y attr2_y attr1 attr2
+0    a       5      19      15      49     5     9
+1    b      14      16       4      36     4    61
+2    c       4       9      14       9    24     9
+"""
+#
+# df3 = df3.merge(df1,on='name').merge(df2,on='name')
+#
+#
+# print(df3)
+# print()
+#
+# df3['attr1'] = df3['attr1_x']
+# df3['attr2'] = df3['attr2_x']
+#
+# df3.drop(['attr1_x', 'attr1_y', 'attr2_x', 'attr2_y'], axis=1, inplace=True)
+#
+# print(df3)
+
+"""
+  name attr1_x attr2_x attr1_y attr2_y attr1 attr2
+0    a      15      49       5       9     5    19
+1    b       4      36       4      61    14    16
+2    c      14       9      24       9     4     9
+"""
 
 
 """
-merge test - different indices
+merge test - different order of values in similar columns
 """
-df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94]})
-df2 = pd.DataFrame({'A': [3,2,1,4,5], 'B':[80,7,60,9,10], 'C':[90,91,92,93,94]})
+# df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94]})
+# df2 = pd.DataFrame({'A': [3,2,1,4,5], 'B':[80,7,60,9,10], 'C':[90,91,92,93,94]})
+#
+# print(df1.merge(df2, on=['A']))
 
-print(df1.merge(df2, on=['A']))
+"""
+Population variables interpolation test
+"""
+#
+# nat_cen_all = pd.read_csv('/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_All_Sorted.csv')
+#
+# pop_vars = nat_cen_all[['YEAR', 'POP100', 'White_count', 'Black_count', 'Hispanic_count', 'Age1524_WhiteM', 'White_Males_All',
+#                                     'Age1524_WhiteF', 'White_Females_All', 'Age1524_BlackM', 'Black_Males_All', 'Age1524_BlackF', 'Black_Females_All',
+#                                     'Hispanic_Males_All', 'Age1524_HispanicM', 'Age1524_HispanicF', 'Hispanic_Females_All', 'Pct_WYM', 'Pct_WYF']]
+#
+# df_cols = pop_vars.columns
+#
+# pop_vars_int_temp = pd.DataFrame()
+#
+# test_df = pop_vars.head(10107)
+#
+# test_df_1 = pd.DataFrame(columns = test_df.columns)
+#
+# for row in zip(test_df['YEAR'], test_df['POP100'], test_df['White_count'], test_df['Black_count'], test_df['Hispanic_count'], test_df['Age1524_WhiteM'], test_df['White_Males_All'], test_df['Age1524_WhiteF'],
+#                test_df['White_Females_All'], test_df['Age1524_BlackM'], test_df['Black_Males_All'], test_df['Age1524_BlackF'], test_df['Black_Females_All'], test_df['Hispanic_Males_All'],
+#                test_df['Age1524_HispanicM'], test_df['Age1524_HispanicF'], test_df['Hispanic_Females_All'], test_df['Pct_WYM'], test_df['Pct_WYF']):
+#     lst = []
+#     lst.append([row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16], row[17], row[18]])
+#     test_df_1 = test_df_1.append(pd.DataFrame(lst, columns=test_df.columns), sort=False)
+#     if row[0] != 1990:
+#         for i in range(9):
+#             test_df_1 = test_df_1.append(pd.Series(), ignore_index=True)
+#
+# # print(test_df_1)
+#
+# test_df_1.interpolate(inplace=True) # --> Only last 2 columns were getting interpolated :X:X:X:X:X
+# print(test_df_1)
+
+
+# for row in test_df.itertuples():
+#     test_df_1 = test_df_1.append(pd.Series(row[1:], index=test_df.columns), ignore_index=True)
+#     # test_df_1 = test_df_1.append(pd.DataFrame(lst, columns=(['YEAR', 'POP100'])), sort=False)
+#     if row.YEAR != 1990:
+#         for i in range(3):
+#             test_df_1 = test_df_1.append(pd.Series(), ignore_index=True)
+#
+# print(test_df_1)
+#
+# test_df_1_int = test_df_1.interpolate(method='linear', axis=0)
+# print(test_df_1_int)
+#
+# df1 = pd.DataFrame({'A': [1,2,3,4,5], 'B':[6,7,8,9,10], 'C':[90,91,92,93,94]})
+# df2 = pd.DataFrame({'A': [2,1,4], 'B':[80,7,60], 'C':[90,91,92]})
+#
+#
+# set_df1 = set(df1['A'])
+# set_df2 = set(df2['A'])
+#
+#
+# common_a_list = list(set_df1.intersection(set_df1.intersection(set_df2)))
+# # print("list common_a: ", list(common_a))
+#
+# common_a_df = pd.DataFrame(common_a_list, columns=['A'])
+#
+# df1_final = df1.merge(common_a_df, on='A')
+# print(df1_final)
+
+nat_cen_fixed_yr = pd.DataFrame()
+
+nat_cen_fixed_yr['YEAR'] = [2010, 2000, 1990, 2010, 2000, 1990, 2010, 2000, 1990]
+
+conditions = [
+    nat_cen_fixed_yr['YEAR'] == 2010,
+    nat_cen_fixed_yr['YEAR'] == 2000,
+    nat_cen_fixed_yr['YEAR'] == 1990,
+]
+
+outputs = [
+    10, 10, 1
+]
+
+year_codes = np.select(conditions, outputs)
+
+nat_cen_fixed_yr['YEAR'] = pd.Series(year_codes)
+
+print(nat_cen_fixed_yr)

@@ -65,6 +65,11 @@ def remove_state_from_placename(pl_name, ptrn):
 def update_census_file_headers(df_obj, file_path):
     # rename 'GEO.display-label' col
     df_obj.rename(columns={'GEO.display-label': 'placename'}, inplace=True)
+
+    """
+        Remove statename from placename variable
+        Ex: Remove ",Alaska" from Anchorage municipality, Alaska
+    """
     df_obj['placename'] = df_obj['placename'].apply(remove_state_from_placename, args=('\,',))
 
     # use str
@@ -104,7 +109,7 @@ def find_census_files_path(data_files_path,ori_files_folder_name, mod_files_fold
     fp_list=[]
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'wip_merge_files': # to ignore hidden files such as .DS_Store
+        if not census_dir.startswith('.') and census_dir != 'wip_merge_files' and census_dir != 'crime_data': # to ignore hidden files such as .DS_Store
             census_folder_path = data_files_path+'/'+census_dir
 
             # move into the county/city census dir

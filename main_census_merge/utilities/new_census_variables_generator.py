@@ -102,7 +102,7 @@ if __name__ == '__main__':
     mod_files_folder_name = 'new_census_variables'
     os.chdir(data_files_path)
     for census_dir in os.listdir():
-        if not census_dir.startswith('.') and census_dir != 'wip_merge_files': # to ignore hidden files such as .DS_Store and all census file
+        if not census_dir.startswith('.') and census_dir != 'wip_merge_files' and census_dir != 'crime_data': # to ignore hidden files such as .DS_Store and all census file
 
             # create a new df for everytime we move into new census dir so that the data from previous iteration is not carried over as was happening with 2000 county census file
             new_df = pd.DataFrame()

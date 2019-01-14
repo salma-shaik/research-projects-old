@@ -42,10 +42,10 @@ def get_glevel_ori_agency(county_cens_file, final_main_df, filename, city_cens_f
     1. Append cities census file to counties census file
     """
     national_census_df = pd.read_csv(county_cens_file)
-    national_census_df.sort_values(by=['STATEFP', 'CNTY'], inplace=True)
+   # national_census_df.sort_values(by=['STATEFP', 'CNTY'], inplace=True)
     if city_cens_file:
         cities_df = pd.read_csv(city_cens_file)
-        cities_df.sort_values(by=['STATEFP', 'CNTY'], inplace=True)
+       # cities_df.sort_values(by=['STATEFP', 'CNTY'], inplace=True)
         national_census_df = national_census_df.append([cities_df])
 
     """
@@ -75,23 +75,23 @@ def get_glevel_ori_agency(county_cens_file, final_main_df, filename, city_cens_f
 
     # print(f'{filename} rows: ', national_census_df.shape[0])
 
-    national_census_df.to_csv(f'/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/{filename}.csv', index=False)
+    national_census_df.to_csv(f'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/{filename}.csv', index=False)
 
 
 
 def merge_cen_final_main():
     # Get the required df from 90 final main file
-    final_main_cgovtype_ori_agency_df = get_final_main_cgovtype_ori_agency('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/Final_Main_Var_1990_2001.csv')
+    final_main_cgovtype_ori_agency_df = get_final_main_cgovtype_ori_agency('C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/Final_Main_Var_1990_2001.csv')
 
     # Create the national census 2000 file
-    counties_00_file = '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv'
-    cities_00_file = '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv'
+    counties_00_file = 'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/census_county_2000/new_census_variables/new_vars_census_county_2000.csv'
+    cities_00_file = 'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/census_cities_2000/new_census_variables/new_vars_census_cities_2000.csv'
     get_glevel_ori_agency(county_cens_file = counties_00_file, city_cens_file = cities_00_file, final_main_df = final_main_cgovtype_ori_agency_df, filename = 'National_Census_2000_fm_merge')
 
 
     # Create the national census 2010 file
-    counties_10_file = '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv'
-    cities_10_file = '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv'
+    counties_10_file = 'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/census_county_2010/new_census_variables/new_vars_census_county_2010.csv'
+    cities_10_file = 'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/census_cities_2010/new_census_variables/new_vars_census_cities_2010.csv'
     get_glevel_ori_agency(county_cens_file = counties_10_file, city_cens_file = cities_10_file, final_main_df = final_main_cgovtype_ori_agency_df, filename = 'National_Census_2010_fm_merge')
 
 
@@ -100,35 +100,35 @@ def merge_cen_final_main():
         # sort by state(smallest to largest) then cnty(smallest to largest) then pop(largest to smallest)
         # drop the duplicates based on state and place fips
     """
-    national_cens_90_df = pd.read_excel('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_1990_All_Initial.xlsx')
+    national_cens_90_df = pd.read_excel('C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_1990_All_Initial.xlsx')
     national_cens_90_df_unique = national_cens_90_df.drop_duplicates(['STATEFP', 'place_fips'])
 
     # add YEAR column with 1990 value at 5th position
     national_cens_90_df_unique.insert(5, 'YEAR', 1990)
 
     # Rename Hispan columns to Hispanic
-    national_cens_90_df_unique.rename({'Hispan_allcount': 'Hispanic_count', 'Hispan_Males_All': 'Hispanic_Males_All', 'Age1524_HispanM': 'Age1524_HispanicM', 'Age1524_HispanF': 'Age1524_HispanicF', 'Hispan_Females_All': 'Hispanic_Females_All'}, inplace=True)
+    national_cens_90_df_unique.rename({'Hispan_allcount': 'Hispanic_count', 'Hispan_Males_All': 'Hispanic_Males_All', 'Age1524_HispanM': 'Age1524_HispanicM', 'Age1524_HispanF': 'Age1524_HispanicF', 'Hispan_Females_All': 'Hispanic_Females_All'}, inplace=True, axis=1)
 
     # drop 'other' columns
-    national_cens_90_df_unique.drop(['Other_count', 'Other_Males_All', 'Age1524_OtherM', 'Age1524_OtherF', 'Other_Females_All', 'Hispan_allcount', 'Hispan_Males_All', 'Age1524_HispanM', 'Age1524_HispanF', 'Hispan_Females_All'], inplace=True, axis=1)
+    national_cens_90_df_unique.drop(['Other_count', 'Other_Males_All', 'Age1524_OtherM', 'Age1524_OtherF', 'Other_Females_All'], inplace=True, axis=1)
 
-    national_cens_90_df_unique.to_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_1990_unique.csv', index=False)
+    national_cens_90_df_unique.to_csv('C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_1990_unique.csv', index=False)
 
     # Create the final 1990 census file by merging with 90 final main file
-    get_glevel_ori_agency(county_cens_file = '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_1990_unique.csv', final_main_df = final_main_cgovtype_ori_agency_df, filename = 'National_Census_1990_fm_merge')
+    get_glevel_ori_agency(county_cens_file = 'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_1990_unique.csv', final_main_df = final_main_cgovtype_ori_agency_df, filename = 'National_Census_1990_fm_merge')
 
 
 def merge_three_cen_files():
     nat_cen_90 = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_1990_fm_merge.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_1990_fm_merge.csv')
     nat_cen_90_codes = nat_cen_90[['ORI', 'STATEFP', 'place_fips']]
 
     nat_cen_00 = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_2000_fm_merge.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_2000_fm_merge.csv')
     nat_cen_00_codes = nat_cen_00[['ORI', 'STATEFP', 'place_fips']]
 
     nat_cen_10 = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_2010_fm_merge.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_2010_fm_merge.csv')
     nat_cen_10_codes = nat_cen_10[['ORI', 'STATEFP', 'place_fips']]
 
     nat_cen_10_merged = nat_cen_10.merge(nat_cen_00_codes, on='ORI').merge(nat_cen_90_codes, on='ORI')
@@ -156,7 +156,7 @@ def clean_nat_cen_file(nat_cen_df, fl_name):
     # re-order df with the new column order
     nat_cen_df = nat_cen_df.loc[:, cols]
 
-    nat_cen_df.to_csv(f'/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/{fl_name}.csv', index=False)
+    nat_cen_df.to_csv(f'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/{fl_name}.csv', index=False)
 
 
 def create_nat_cen_all_file():
@@ -179,17 +179,17 @@ def create_nat_cen_all_file():
 
 
     nat_cen_90_all_df = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_1990_All.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_1990_All.csv')
     nat_cen_00_all_df = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_2000_All.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_2000_All.csv')
     nat_cen_10_all_df = pd.read_csv(
-        '/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_2010_All.csv')
+        'C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_2010_All.csv')
 
     nat_cen_all = nat_cen_10_all_df.append([nat_cen_00_all_df, nat_cen_90_all_df], sort=False)
 
     print(nat_cen_all.shape[0])
 
-    nat_cen_all.to_csv('/Users/salma/Studies/Research/Criminal_Justice/research_projects/main_census_merge/data/wip_merge_files/National_Census_All.csv', index=False)
+    nat_cen_all.to_csv('C:/Users/sshaik2/projects/research/research-projects/main_census_merge/data/wip_merge_files/National_Census_All.csv', index=False)
 
 
 create_nat_cen_all_file()
